@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+
 import { Canvas } from "@react-three/fiber";
 import Scene from "./Scene";
 
@@ -17,8 +17,6 @@ function FiberContainer() {
             <Canvas id="canvas" camera={{ position: [14.4666, 2.0365, 5.556165], fov: 40 }} shadows>
                 <Scene />
                 <Ground />
-                {/* <OrbitControls  minDistance={10} maxDistance={400} autoRotate /> */}
-
             </Canvas>
         </>
     )

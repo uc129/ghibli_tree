@@ -2,17 +2,13 @@ import { forwardRef, useMemo } from "react";
 import { useGLTF } from "@react-three/drei";
 import { Vector3 } from "three";
 
-// import * as SimpleShader from "../utils/shaders/simpleshader";
-
-import { ToonShader } from "./shaders/toonShader";
-import tree from '../assets/trees.glb'
 import { GhibliShader } from "./shaders/ghibliShader";
 
 
 
 const Tree = forwardRef((props, ref) => {
 
-    const { nodes } = useGLTF(tree);
+    const { nodes } = useGLTF('/trees.glb');
 
     // const toneMap = useMemo(() => {
     //     const format = RedFormat;
@@ -76,7 +72,7 @@ const Tree = forwardRef((props, ref) => {
     );
 });
 
-useGLTF.preload(tree);
+useGLTF.preload('/trees.glb');
 
 export default Tree;
 

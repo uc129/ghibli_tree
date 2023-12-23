@@ -1,4 +1,4 @@
-import { Color, Vector3 } from 'three'
+
 
 export const GhibliShader = {
 
