@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+## Ghibli-Style Tree in Three.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project creates a Ghibli-style tree using Three.js, a popular JavaScript library for 3D graphics. The tree model was initially created in Blender and exported as a GLB file, which was then imported into JavaScript to create the Ghibli-style tree effect.
 
-## Available Scripts
+## Table of Contents
+Getting Started
+Usage
+Customization
+Credits
+License
+Getting Started
+To get started with this project, follow these steps:
 
-In the project directory, you can run:
+## Clone the repository to your local machine:
+Copy code
+git clone 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Install the required dependencies using npm or yarn:
+npm install or yarn install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Run the project locally:
+bash
+Copy code
+npm start or yarn start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## View 
+Open your web browser and navigate to http://localhost:3000 to see the Ghibli-style tree in action.
 
-### `npm run build`
+## Usage
+The Ghibli-style tree can be used in your own projects by importing the Tree component and customizing it as needed. Here's an example of how to use it in your React application:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`javascript`
+import React from "react";
+import Tree from "./Tree";
+function App() {
+  return (
+    <div className="App">
+      <Tree colors={[0x49897C, 0x050505, 0xFFFFFF, 0x808080]} />
+    </div>
+  );
+}
+export default App;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In this example, the colors prop is passed to the Tree component, allowing you to customize the tree's appearance.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Customization
+You can customize the Ghibli-style tree by adjusting various parameters in the shaders and the Tree component:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Shader Parameters: You can modify the appearance of the tree by tweaking the parameters in the GhibliShader located in the shaders/ghibliShader.js file. This includes adjusting colors, lighting, and brightness thresholds.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tree Position and Scale: You can change the position and scale of the tree by modifying the position and scale properties in the Tree component in your React application.
 
-## Learn More
+Tree Model: If you want to use a different tree model, you can replace the trees.glb file in the assets directory with your own GLB model. Ensure that your model is properly exported with materials.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Credits
+This project uses the Three.js library for 3D rendering. You can find more information about Three.js here.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Ghibli-style shader is inspired by the art style of Studio Ghibli films.
 
-### Code Splitting
+DevasLife for the inspiration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
